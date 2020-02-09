@@ -26,7 +26,7 @@ npm install
 Fill your `.env` file with Zendesk Sell user mail, pass and url to your company login page, 
 remember don't push your `.env` file to repo, `.gitignore` should help ;)
 
-By default tests are running in headless mode. You can change it with GUI changing in `jest-puppeteer.config` the `headless: true` to `headless: false`.
+By default tests are running in headless mode. You can run them in non headless mode. For this purpose you need change in `jest-puppeteer.config` the `headless: true` to `headless: false`.
 
 Start tests:
 
@@ -57,3 +57,7 @@ docker-compose run --rm test
 
  ## TO DO
  * So far tests launched in docker work only headless mode...
+ 
+ ## DEMO
+ 
+ ![zenAutomation](https://user-images.githubusercontent.com/16684160/74110367-2535aa00-4b8c-11ea-9198-1a755ae6f768.gif)
