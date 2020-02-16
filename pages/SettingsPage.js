@@ -1,14 +1,15 @@
 import BasePage from "./BasePage";
 
 //locators
-const settingsPage = {  
+const settingsPage = {
 //Settings:
-    leadSettings: '#sidebar > div > div > ul > li.leads > a',
-    leadStatuses: '#leads-settings-tabs > li:nth-child(3) > a',
-    addLeadStatusButton: '#lead-status > div.new-named-object > div.create.control-group > div > button',
-    firstEditButton: '#lead-status > div.named-objects-list.named-objects-lead.ui-sortable > span:nth-child(1) > div > div > div > div > span.main-toolbar > button',
-    statusInput: ('#lead-status > div.named-objects-list.named-objects-lead.ui-sortable > span:nth-child(1) > div > div > form > fieldset > div:nth-child(2) > div'),
-    saveStatusButton: '#lead-status > div.named-objects-list.named-objects-lead.ui-sortable > span:nth-child(1) > div > div > form > fieldset > div:nth-child(3) > div > button',
+    leadSettings: '.leads',
+    leadStatuses: '[data-toggle="lead-status"]',
+    addLeadStatusButton: '#lead-status .btn.btn-mini.new',
+    firstEditButton: '#lead-status .btn.btn-mini.edit',
+    allStatuses: '#lead-status .named-object-lead',
+    statusInput: ('#lead-status #name'),
+    saveStatusButton: '#lead-status .btn.btn-primary.save',
 }
 
 const URL = {

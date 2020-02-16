@@ -6,11 +6,11 @@ import BasePage from "./BasePage";
 const loginPage = {
     loginPageUrl : process.env.LOGIN_PAGE_URL,
     zendeskLogo : '.logo',
-    loginIframe : 'body > div:nth-child(3) > iframe',
+    loginIframe : 'body iframe',
     userEmail : '#user_email',
     userPassword : '#user_password',
-    submitButton : 'input[value="Sign in"]'
-}
+    submitButton : '.button'
+};
 
 export default class LoginPage extends BasePage {
 

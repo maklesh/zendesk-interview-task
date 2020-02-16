@@ -1,17 +1,17 @@
 import BasePage from "./BasePage";
 
 //locators
-const leadDetailsPage = {  
+const leadDetailsPage = {
     //leadpage
     leadHeader: '#lead-avatar',
-    leadStatus: '#details > div > ul > div.status > div > a > span.lead-status',
-    leadHeaderData: '#header > div > div > div > header > div > h1 > span.detail-title',
+    leadStatus: 'span.lead-status',
+    leadHeaderData: 'span.detail-title',
 
-     //cleanUp:
-     editLeadButton: '#header > div > div > div > header > div > h1 > span.detail-title > span.title-actions > a',
-     deleteThisLeadButton: '#app-root > div > div > div._1_a--ModalsLayer--ModalsLayer._3rD--ModalsLayer--shadow.TNS--ModalsLayer--visible > div > span > span > div._1vs--ModalLayout--modalContainer > div > div._3w9--FilterableSections--FilterableSections.Qul--fonts--regular_m.vz7--fonts--regular.Mf6--effects--shadow_m._2fV--FormModalLayout--scrollableTabs > div > div.vGs--FilterableSections--footer > div > div > div:nth-child(1) > a > div',
-     deleteCheckbox: '#app-root > div > div > div._1_a--ModalsLayer--ModalsLayer._3rD--ModalsLayer--shadow.TNS--ModalsLayer--visible > div:nth-child(2) > span > span > div._1vs--ModalLayout--modalContainer > div > div._1B5--ModalLayout--content > div > div._2gL--AbstractToggle--Toggle._2RL--keyboardMode--outlineWhenFocused.JXW--Checkbox--Toggle._2sD--AbstractToggle--multiline._2UQ--AbstractToggle--withLabel.kgD--AbstractToggle--placement_left._3vF--grid--width_grow',
-     deleteDangerButton: '#app-root > div > div > div._1_a--ModalsLayer--ModalsLayer._3rD--ModalsLayer--shadow.TNS--ModalsLayer--visible > div:nth-child(2) > span > span > div._1vs--ModalLayout--modalContainer > div > div._1hp--ModalLayout--footer > div > div > button._1AM--Button--Button.Qul--fonts--regular_m.vz7--fonts--regular._2RL--keyboardMode--outlineWhenFocused._1KF--DangerButton--Button',
+    //cleanUp:
+    editLeadButton: 'a.btn.detail-edit',
+    deleteThisLeadButton: 'a[data-action="lead-delete-link"]',
+    deleteCheckbox: '._1B5--ModalLayout--content [tabindex]',
+    deleteDangerButton: '._1KF--DangerButton--Button',
 }
 
 const URL = {
