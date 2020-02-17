@@ -25,7 +25,6 @@ describe('Zendesk XXX Interview e2e suite', () => {
         loginPage = new LoginPage;
         navBar = new NavBar;
         settingsPage = new SettingsPage;
-
     });
 
     describe('Login Part', () => {
@@ -62,6 +61,7 @@ describe('Zendesk XXX Interview e2e suite', () => {
             await navBar.goToSettings();
             await settingsPage.goToLeadSettings();
             await settingsPage.goToLeadStatuses();
+            await settingsPage.clickEditButtonByLeadStatusValue(baseLeadStatus)
             await settingsPage.changeStatusValue(newLeadStatus);
         })
 
@@ -75,6 +75,7 @@ describe('Zendesk XXX Interview e2e suite', () => {
         it('should delete created lead and revert status to New', async () =>{
             await leadDetailsPage.deleteCreatedLead();
             await settingsPage.goToLeadStatusesByUrl();
+            await settingsPage.clickEditButtonByLeadStatusValue(newLeadStatus);
             await settingsPage.changeStatusValue(baseLeadStatus);
         })
     })

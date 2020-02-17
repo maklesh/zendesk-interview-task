@@ -10,6 +10,7 @@ const settingsPage = {
     allStatuses: '#lead-status .named-object-lead',
     statusInput: ('#lead-status #name'),
     saveStatusButton: '#lead-status .btn.btn-primary.save',
+    simpleButton: ('.btn'),
 }
 
 const URL = {
@@ -34,9 +35,19 @@ export default class SettingsPage extends BasePage{
         await page.waitForSelector(settingsPage.addLeadStatusButton)
     }
 
+    async clickEditButtonByLeadStatusValue(searchText){
+        const options = await page.$$(settingsPage.allStatuses);
+        for (const option of options) {
+            const label = await page.evaluate(el => el.innerText, option);
+            if(label.includes(searchText)){
+                let alpha = await option.$(settingsPage.simpleButton);
+                await alpha.click();
+                break;
+            }
+        }
+    }
+
     async changeStatusValue(newValue){
-        await page.waitForSelector(settingsPage.firstEditButton);
-        await page.click(settingsPage.firstEditButton);
         await page.waitForSelector(settingsPage.statusInput);
         await page.click(settingsPage.statusInput, { clickCount: 3 })
         await page.type(settingsPage.statusInput, newValue);
