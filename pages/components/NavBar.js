@@ -1,3 +1,5 @@
+'use strict';
+
 //locators
 const navBar = {
     //nav buttons

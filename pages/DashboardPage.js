@@ -1,3 +1,5 @@
+'use strict';
+
 import BasePage from "./BasePage";
 
 //locators

@@ -11,11 +11,11 @@ const settingsPage = {
     statusInput: ('#lead-status #name'),
     saveStatusButton: '#lead-status .btn.btn-primary.save',
     simpleButton: ('.btn'),
-}
+};
 
 const URL = {
     leadStatuses: 'https://app.futuresimple.com/settings/leads/lead-status',
-}
+};
 
 export default class SettingsPage extends BasePage{
 

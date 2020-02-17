@@ -1,4 +1,5 @@
-const dotenv = require('dotenv').config();
+'use strict';
+
 const config = require('../config');
 
 

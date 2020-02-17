@@ -1,3 +1,5 @@
+'use strict';
+
 import BasePage from "./BasePage";
 
 //locators
@@ -12,11 +14,11 @@ const leadDetailsPage = {
     deleteThisLeadButton: 'a[data-action="lead-delete-link"]',
     deleteCheckbox: '._1B5--ModalLayout--content [tabindex]',
     deleteDangerButton: '._1KF--DangerButton--Button',
-}
+};
 
 const URL = {
     dedicatedlead: '',
-}
+};
 
 export default class LeadDetailsPage extends BasePage {
 
